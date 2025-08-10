@@ -1,9 +1,19 @@
 name: "Build"
 
 on:
+  push:
   workflow_dispatch:
-  release:
-    types: [published]
+  #release:
+  #  types: [published]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -21,48 +31,29 @@ jobs:
           node-version: 22
           cache: npm
 
-      - name: "Install"
-        run: |
-          npm install
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
-      - name: "Update Manifest Version"
-        if: ${{ github.event_name == 'release' }}
-        uses: cssnr/update-json-value-action@v1
+      - name: Install Dependencies
+        run: npm ci
 
-      - name: "Build"
-        run: |
-          npm run build
+      - name: Build Documentation
+        run: npm run build
 
-      - name: "Upload to Actions"
-        if: ${{ github.event_name == 'workflow_dispatch' }}
-        uses: actions/upload-artifact@v4
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: artifacts
-          path: web-ext-artifacts/
+          path: .vitepress/dist
 
-      - name: "Upload to Release"
-        if: ${{ github.event_name == 'release' }}
-        uses: svenstaro/upload-release-action@v2
-        with:
-          file: web-ext-artifacts/*
-          tag: ${{ github.ref }}
-          overwrite: true
-          file_glob: true
-
-      - name: "Update Release Notes Action"
-        if: ${{ github.event_name == 'release' }}
-        continue-on-error: true
-        uses: smashedr/update-release-notes-action@master
-        with:
-          type: generic
-
-      - name: "Package Changelog Action"
-        if: ${{ github.event_name == 'release' }}
-        continue-on-error: true
-        uses: cssnr/package-changelog-action@v1
-
-      - name: "Send Failure Notification"
-        if: ${{ failure() && github.event_name == 'release' }}
-        uses: sarisia/actions-status-discord@v1
-        with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
