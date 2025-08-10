@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: './docs',
+  base: '/vitepress-test/',
   title: 'VitePress Test',
   description: 'VitePress Best Press',
   themeConfig: {

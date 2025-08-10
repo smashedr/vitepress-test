@@ -1,4 +1,5 @@
 [![Pages](https://img.shields.io/github/actions/workflow/status/smashedr/vitepress-test/pages.yaml?logo=github&label=pages)](https://github.com/smashedr/vitepress-test/actions/workflows/pages.yaml)
+[![Lint](https://img.shields.io/github/actions/workflow/status/smashedr/vitepress-test/lint.yaml?logo=github&label=lint)](https://github.com/smashedr/vitepress-test/actions/workflows/lint.yaml)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/smashedr/vitepress-test?logo=github&label=updated)](https://github.com/smashedr/vitepress-test/graphs/commit-activity)
 [![GitHub Top Language](https://img.shields.io/github/languages/top/smashedr/vitepress-test?logo=htmx)](https://github.com/smashedr/vitepress-test)
 [![GitHub Repo Size](https://img.shields.io/github/repo-size/smashedr/vitepress-test?logo=bookstack&logoColor=white&label=repo%20size)](https://github.com/smashedr/vitepress-test)
