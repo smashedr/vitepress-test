@@ -1,0 +1,10 @@
+.idea/
+*.iml
+.vscode/
+**/dist/
+build/
+node_modules/
+
+.vitepress/cache
+
+.cache-loader
