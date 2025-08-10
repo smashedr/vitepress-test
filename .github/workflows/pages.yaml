@@ -1,10 +1,14 @@
-name: "Build"
+name: "Pages"
 
 on:
   push:
+    branches:
+      - "master"
+    paths:
+      - "docs/**"
+      - "package.json"
+      - ".github/workflows/pages.yaml"
   workflow_dispatch:
-  #release:
-  #  types: [published]
 
 permissions:
   contents: read
