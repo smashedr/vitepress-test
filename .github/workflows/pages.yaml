@@ -8,6 +8,7 @@ on:
       - "docs/**"
       - "package.json"
       - ".github/workflows/pages.yaml"
+      - ".vitepress/config.mts"
   workflow_dispatch:
 
 permissions:
