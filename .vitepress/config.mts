@@ -14,7 +14,7 @@ export default defineConfig({
   description: 'VitePress Best Press',
   head: [
     ['meta', { name: 'algolia-site-verification', content: 'F2F13A0484455E9F' }],
-    ['meta', { name: 'robots', content: 'noindex,nofollow' }],
+    // ['meta', { name: 'robots', content: 'noindex,nofollow' }],
     ['meta', { name: 'darkreader-lock' }],
   ],
 
@@ -48,6 +48,16 @@ export default defineConfig({
       formatOptions: {
         dateStyle: 'full',
         timeStyle: 'medium',
+      },
+    },
+
+    search: {
+      // provider: 'local',
+      provider: 'algolia',
+      options: {
+        appId: 'CYR3HCDCK8',
+        apiKey: '2ebbec61f58bdaa0f89787848930815c',
+        indexName: 'smashedr_github_io_cyr3hcdck8_pages',
       },
     },
   },
