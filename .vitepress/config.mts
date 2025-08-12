@@ -57,7 +57,7 @@ export default defineConfig({
       options: {
         appId: 'CYR3HCDCK8',
         apiKey: '2ebbec61f58bdaa0f89787848930815c',
-        indexName: 'smashedr_github_io_cyr3hcdck8_pages',
+        indexName: 'smashedr_github_io_vitepress_test',
       },
     },
   },
