@@ -13,6 +13,7 @@ export default defineConfig({
   title: 'VitePress Test',
   description: 'VitePress Best Press',
   head: [
+    ['meta', { name: 'algolia-site-verification', content: 'F2F13A0484455E9F' }],
     ['meta', { name: 'robots', content: 'noindex,nofollow' }],
     ['meta', { name: 'darkreader-lock' }],
   ],
