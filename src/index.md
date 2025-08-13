@@ -6,6 +6,9 @@ hero:
   name: 'VitePress Test'
   text: 'VitePress Best Press'
   tagline: My great project tagline
+  image:
+    src: /images/logo-lg.png
+    alt: Zipline Android
   actions:
     - theme: brand
       text: Markdown Examples

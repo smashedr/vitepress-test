@@ -10,11 +10,33 @@
 [![Discord](https://img.shields.io/discord/899171661457293343?logo=discord&logoColor=white&label=discord&color=7289da)](https://discord.gg/wXy6m2X8wY)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-72a5f2?logo=kofi&label=Support)](https://ko-fi.com/cssnr)
 
-# Generic Readme
+# VitePress Test
 
-This Readme is a Good Readme. Please Readme.
+These [docs](docs) are **written in plain text** using Markdown and built with [VitePress](https://vitepress.dev/).
+
+| Location                   | Description                          |
+| -------------------------- | ------------------------------------ |
+| [docs](docs)               | Documentation Root (Markdown files). |
+| [docs/public](docs/public) | Static Root (copied to docs root).   |
+| [.vitepress](.vitepress)   | VitePress Configuration Root.        |
+
+## Development
+
+To get started, clone the repository and run `npm i` then `npm run dev`.
+
+```shell
+npm install
+npm run dev
+```
+
+The site should now be available at: http://localhost:5173/
+
+- [VitePress CLI Reference](https://vitepress.dev/reference/cli)
+- [VitePress Markdown Reference](https://vitepress.dev/guide/markdown)
 
 # Contributing
+
+For instructions on modifying the documentation see the [CONTRIBUTING.md](https://github.com/cssnr/.github/blob/master/.github/CONTRIBUTING.md).
 
 Please consider making a donation to support the development of this project
 and [additional](https://cssnr.com/) open source projects.
