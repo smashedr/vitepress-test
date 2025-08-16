@@ -9,7 +9,7 @@ const settings = {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  srcDir: './src',
+  srcDir: './docs',
   base: '/vitepress-test/', // NOTE: base is also required for meta paths
   vite: {
     server: {
@@ -86,7 +86,7 @@ export default defineConfig({
     ],
 
     editLink: {
-      pattern: 'https://github.com/smashedr/vitepress-test/blob/master/src/:path',
+      pattern: 'https://github.com/smashedr/vitepress-test/blob/master/docs/:path',
       text: 'View on GitHub',
     },
 

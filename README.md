@@ -12,7 +12,7 @@
 
 # VitePress Test
 
-These [docs](docs) are **written in plain text** using Markdown and built with [VitePress](https://vitepress.dev/).
+These [docs](./docs) are **written in plain text** using Markdown and built with [VitePress](https://vitepress.dev/).
 
 | Location                   | Description                          |
 | -------------------------- | ------------------------------------ |
