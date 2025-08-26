@@ -1,48 +1,26 @@
-<script setup lang="ts">
-import { computed } from 'vue'
-
-const props = withDefaults(
-  defineProps<{
-    title: string
-    desc?: string
-    logo?: string
-    link?: string
-    color?: string
-    cover?: string
-  }>(),
-  {
-    desc: '',
-    logo: '',
-    link: '',
-    color: '',
-    cover: '',
-  }
-)
-
-const isExternal = computed(() => /^https?:\/\//.test(props.link))
-
-const cardLink = computed(() => props.link || '#')
-
-const cardLogo = computed(() => {
-  if (props.logo) return props.logo
-
-  // fallback: favicon by domain
-  if (props.link && isExternal.value)
-    return `https://s2.googleusercontent.com/s2/favicons?domain_url=${props.link}&sz=96`
-
-  return '/favicon.png'
+<script setup>
+const props = defineProps({
+  title: { type: String, required: true },
+  href: { type: String, required: true },
+  text: { type: String, default: '' },
+  src: { type: String, default: '' },
 })
 
-const descText = computed(() => props.desc || props.link || '')
+const isExternal = /^https?:\/\//.test(props.href)
 </script>
 
 <template>
-  <a class="link-card" :href="cardLink" :target="isExternal ? '_blank' : '_self'" rel="noopener noreferrer">
+  <a
+    class="link-card"
+    :href="props.href"
+    :target="isExternal ? '_blank' : null"
+    :rel="isExternal ? 'noopener noreferrer' : null"
+  >
     <div class="link-card-content">
-      <img class="link-card-logo" :src="cardLogo" alt="icon" />
+      <img class="link-card-logo" :src="props.src" :alt="props.title" />
       <div class="link-card-text">
         <div class="link-card-title">{{ title }}</div>
-        <div class="link-card-desc">{{ descText }}</div>
+        <div class="link-card-desc">{{ text || href }}</div>
       </div>
     </div>
   </a>
