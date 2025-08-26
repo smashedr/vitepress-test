@@ -36,7 +36,7 @@ const isExternal = /^https?:\/\//.test(props.href)
   margin-bottom: 1em;
   text-decoration: none;
   border: 2px solid transparent;
-  transition: border-color 0.4s ease;
+  transition: border-color 0.25s ease;
   color: inherit;
 }
 
