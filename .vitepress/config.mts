@@ -1,16 +1,20 @@
 import { defineConfig } from 'vitepress'
 
 const settings = {
-  author: 'Shane',
+  base: '/vitepress-test', // no trailing slash
   title: 'VitePress Test',
   name: 'VitePress Test Site',
-  description: 'VitePress Best Press.',
+  description: {
+    short: 'VitePress Best Press.',
+    long: 'VitePress Best Press.',
+  },
 }
 
 // https://vitepress.dev/reference/site-config
+// noinspection JSUnusedGlobalSymbols
 export default defineConfig({
   srcDir: './docs',
-  base: '/vitepress-test/', // NOTE: base is also required for meta paths
+  base: `${settings.base}/`, // NOTE: base is also required for meta paths
   vite: {
     server: {
       allowedHosts: true,
@@ -18,28 +22,26 @@ export default defineConfig({
   },
 
   title: settings.title,
-  description: settings.description,
+  description: settings.description.short,
   head: [
-    ['link', { rel: 'icon', href: '/vitepress-test/favicon.ico', sizes: 'any' }],
+    ['link', { rel: 'icon', href: `${settings.base}/favicon.ico`, sizes: 'any' }],
     ['meta', { name: 'darkreader-lock' }],
 
     ['meta', { name: 'theme-color', content: '#344398' }],
-    ['meta', { name: 'author', content: settings.author }],
-    ['meta', { name: 'description', content: settings.description }],
+    ['meta', { name: 'description', content: settings.description.long }],
 
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:author', content: settings.author }],
     ['meta', { property: 'og:site_name', content: settings.name }],
     ['meta', { property: 'og:title', content: settings.title }],
-    ['meta', { property: 'og:description', content: settings.description }],
-    ['meta', { property: 'og:image', content: '/vitepress-test/images/logo-lg.png' }],
+    ['meta', { property: 'og:description', content: settings.description.short }],
+    ['meta', { property: 'og:image', content: `${settings.base}/images/logo-lg.png` }],
     ['meta', { property: 'og:image:alt', content: settings.title }],
 
     ['meta', { property: 'twitter:card', content: 'summary' }],
     ['meta', { property: 'twitter:site', content: settings.name }],
     ['meta', { property: 'twitter:title', content: settings.title }],
-    ['meta', { property: 'twitter:description', content: settings.description }],
-    ['meta', { property: 'twitter:image', content: '/vitepress-test/images/logo-lg.png' }],
+    ['meta', { property: 'twitter:description', content: settings.description.short }],
+    ['meta', { property: 'twitter:image', content: `${settings.base}/images/logo-lg.png` }],
     ['meta', { property: 'twitter:image:alt', content: settings.title }],
   ],
 
@@ -107,5 +109,13 @@ export default defineConfig({
         indexName: 'smashedr_github_io_vitepress_test',
       },
     },
+
+    // footer: {
+    //   message: '<a href="/privacy">Privacy Policy</a>',
+    //   copyright: '<a href="/privacy">Privacy Policy</a>',
+    // },
+
+    externalLinkIcon: true,
+    outline: 'deep',
   },
 })
