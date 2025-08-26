@@ -11,13 +11,13 @@ const isExternal = /^https?:\/\//.test(props.href)
 
 <template>
   <a
-    class="link-card"
+    class="link-card no-icon"
     :href="props.href"
     :target="isExternal ? '_blank' : null"
     :rel="isExternal ? 'noopener noreferrer' : null"
   >
     <div class="link-card-content">
-      <img class="link-card-logo" :src="props.src" :alt="props.title" />
+      <img class="link-card-logo" v-if="props.src" :src="props.src" :alt="props.title" />
       <div class="link-card-text">
         <div class="link-card-title">{{ title }}</div>
         <div class="link-card-desc">{{ text || href }}</div>
@@ -32,7 +32,7 @@ const isExternal = /^https?:\/\//.test(props.href)
   background-color: var(--vp-c-bg-soft);
   border-radius: 12px;
   padding: 1em;
-  margin-top: 24px;
+  margin-top: 20px;
   margin-bottom: 1em;
   text-decoration: none;
   border: 2px solid transparent;
@@ -51,11 +51,13 @@ const isExternal = /^https?:\/\//.test(props.href)
 }
 
 .link-card-logo {
+  color: var(--vp-c-text-1);
   width: 3em;
   height: 3em;
-  border-radius: 0.5em;
-  object-fit: contain;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .link-card-text {
