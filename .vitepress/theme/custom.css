@@ -1,9 +1,9 @@
 :root {
     --vp-home-hero-name-color: transparent;
-    --vp-home-hero-name-background: linear-gradient(120deg, #ff00ff, #18e7ff);
+    --vp-home-hero-name-background: linear-gradient(120deg, #d2d6dd, #797e8c);
 
     --vp-home-hero-image-filter: blur(44px);
-    --vp-home-hero-image-background-image: radial-gradient(circle, #5a6a73 0%, rgba(90, 106, 115, 0) 100%);
+    --vp-home-hero-image-background-image: radial-gradient(circle, #797e8c 0%, rgba(121, 126, 140, 0) 100%);
 }
 
 img {
