@@ -52,6 +52,7 @@ export default defineConfig({
     logo: '/images/logo-sm.png',
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Test', link: '/test' },
       { text: 'Examples', link: '/markdown-examples' },
       {
         text: 'Links',
@@ -69,6 +70,7 @@ export default defineConfig({
       {
         text: 'Examples',
         items: [
+          { text: 'Test', link: '/test' },
           { text: 'Markdown Examples', link: '/markdown-examples' },
           { text: 'Runtime API Examples', link: '/api-examples' },
         ],
