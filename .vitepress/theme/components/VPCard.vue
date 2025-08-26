@@ -57,8 +57,8 @@ const descText = computed(() => props.desc || props.link || '')
   margin-top: 24px;
   margin-bottom: 1em;
   text-decoration: none;
-  border: 3px solid transparent;
-  transition: border-color 0.2s ease;
+  border: 2px solid transparent;
+  transition: border-color 0.4s ease;
   color: inherit;
 }
 
@@ -86,23 +86,23 @@ const descText = computed(() => props.desc || props.link || '')
 }
 
 .link-card-title {
-  font-weight: 600;
+  color: var(--vp-c-text-1);
+  font-weight: bold;
   font-size: 1em;
-  margin-bottom: 0.2em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .link-card-desc {
-  font-size: 0.9em;
   color: var(--vp-c-text-2);
-  overflow: hidden;
+  font-size: 0.9em;
   white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 639px) {
   .link-card-title {
     font-size: 0.95em;
   }
