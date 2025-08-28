@@ -53,7 +53,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Test', link: '/test' },
-      { text: 'Examples', link: '/markdown-examples' },
+      { text: 'Examples', link: '/examples' },
       {
         text: 'Links',
         items: [
@@ -71,8 +71,9 @@ export default defineConfig({
         text: 'Examples',
         items: [
           { text: 'Test', link: '/test' },
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
+          { text: 'Test 2', link: '/test2' },
+          { text: 'Markdown', link: '/markdown' },
+          { text: 'Examples', link: '/examples' },
         ],
       },
     ],

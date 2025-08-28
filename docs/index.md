@@ -11,17 +11,20 @@ hero:
     alt: Zipline Android
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Test
+      link: /test
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Examples
+      link: /examples
 
 features:
-  - title: Feature A
+  - title: Test 1
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
+    link: /test
+  - title: Tes 2
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
+    link: /test2
+  - title: Examples
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: /examples
 ---
