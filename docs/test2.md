@@ -2,6 +2,23 @@
 
 [[toc]]
 
+## test
+
+<VPSwiper
+base-url="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/web-extension/docs"
+:number-of-slides="6"
+/>
+
+## Picsum Slide
+
+<VPSwiper
+base-url="https://picsum.photos/id"
+:number-of-slides="8"
+:lazy-preload-prev-next="0"
+file-ext="/800/600"
+effect="slide"
+/>
+
 ## Browser
 
 <VPSwiper
