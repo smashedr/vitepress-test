@@ -10,6 +10,32 @@
     );
 }
 
-/*img {*/
-/*    display: inline-block;*/
-/*}*/
+body {
+    overflow-y: scroll;
+}
+
+summary {
+    cursor: pointer;
+}
+
+table th {
+    text-wrap: nowrap;
+}
+
+.vp-doc img {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.search-keywords {
+    display: none;
+}
+
+/* NOTE: This is a "fix" for the search modal content shift */
+@supports (scrollbar-gutter: stable) {
+    @media (min-width: 769px) {
+        html {
+            scrollbar-gutter: stable;
+        }
+    }
+}
