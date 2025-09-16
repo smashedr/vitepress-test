@@ -1,3 +1,3 @@
 # Alpha
 
-clean
+Clean

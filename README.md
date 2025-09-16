@@ -1,5 +1,7 @@
-[![Pages](https://img.shields.io/github/actions/workflow/status/smashedr/vitepress-test/pages.yaml?logo=github&label=pages)](https://github.com/smashedr/vitepress-test/actions/workflows/pages.yaml)
-[![Lint](https://img.shields.io/github/actions/workflow/status/smashedr/vitepress-test/lint.yaml?logo=github&label=lint)](https://github.com/smashedr/vitepress-test/actions/workflows/lint.yaml)
+[![GitHub Deployments](https://img.shields.io/github/deployments/smashedr/vitepress-test/github-pages?logo=github&label=deploy)](https://github.com/smashedr/vitepress-test/deployments)
+[![Pages](https://img.shields.io/github/actions/workflow/status/smashedr/vitepress-test/pages.yaml?logo=cachet&label=pages)](https://github.com/smashedr/vitepress-test/actions/workflows/pages.yaml)
+[![Lint](https://img.shields.io/github/actions/workflow/status/smashedr/vitepress-test/lint.yaml?logo=cachet&label=lint)](https://github.com/smashedr/vitepress-test/actions/workflows/lint.yaml)
+[![GitHub Contributors](https://img.shields.io/github/contributors/smashedr/vitepress-test?logo=github)](https://github.com/smashedr/vitepress-test/graphs/contributors)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/smashedr/vitepress-test?logo=github&label=updated)](https://github.com/smashedr/vitepress-test/graphs/commit-activity)
 [![GitHub Top Language](https://img.shields.io/github/languages/top/smashedr/vitepress-test?logo=htmx)](https://github.com/smashedr/vitepress-test)
 [![GitHub Repo Size](https://img.shields.io/github/repo-size/smashedr/vitepress-test?logo=bookstack&logoColor=white&label=repo%20size)](https://github.com/smashedr/vitepress-test)
@@ -12,13 +14,18 @@
 
 # VitePress Test
 
-These [docs](./docs) are **written in plain text** using Markdown and built with [VitePress](https://vitepress.dev/).
+VitePress Test Site.
 
-| Location                   | Description                          |
-| -------------------------- | ------------------------------------ |
-| [docs](docs)               | Documentation Root (Markdown files). |
-| [docs/public](docs/public) | Static Root (copied to docs root).   |
-| [.vitepress](.vitepress)   | VitePress Configuration Root.        |
+- https://smashedr.github.io/vitepress-test/
+
+These [docs](docs) are **written in plain text** using Markdown and built with [VitePress](https://vitepress.dev/).
+
+| Location                                       | Description                          |
+| ---------------------------------------------- | ------------------------------------ |
+| [docs](docs)                                   | Documentation Root (Markdown files). |
+| [docs/public](docs/public)                     | Static Root (copied to docs root).   |
+| [.vitepress](.vitepress)                       | VitePress Configuration Root.        |
+| [.vitepress/config.mts](.vitepress/config.mts) | VitePress Configuration File.        |
 
 ## Development
 
@@ -36,7 +43,7 @@ The site should now be available at: http://localhost:5173/
 
 # Contributing
 
-For instructions on modifying the documentation see the [CONTRIBUTING.md](https://github.com/cssnr/.github/blob/master/.github/CONTRIBUTING.md).
+For instructions on modifying the documentation see the [CONTRIBUTING.md](#contributing-ov-file).
 
 Please consider making a donation to support the development of this project
 and [additional](https://cssnr.com/) open source projects.
