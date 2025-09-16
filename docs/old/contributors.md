@@ -3,8 +3,10 @@
 ## Setup Script
 
 <script setup>
-import contributors from '../.vitepress/contributors.json'
+// import contributors from '../.vitepress/contributors.json'
 </script>
+
+<span v-pre>
 
 <Contributors
 heading="Contributors 6"
@@ -21,3 +23,5 @@ max-users="100"
 size="48"
 margin="36px 0 96px"
 />
+
+</span>
