@@ -4,7 +4,7 @@
     "build": "vitepress build .",
     "preview": "vitepress preview .",
     "prettier": "npx prettier --check .",
-    "get-contributors": "npx get-contributors cssnr/stack-deploy-action"
+    "get-contributors": "npx get-contributors vuejs/vitepress -m 98"
   },
   "dependencies": {
     "@cssnr/vitepress-plugin-contributors": "file:../vitepress-contributors",
