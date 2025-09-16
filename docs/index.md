@@ -7,7 +7,7 @@ hero:
   text: 'VitePress Best Press'
   tagline: My great project tagline
   image:
-    src: /images/logo-lg.png
+    src: /images/logo.png
     alt: Zipline Android
   actions:
     - theme: brand

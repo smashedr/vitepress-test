@@ -9,6 +9,8 @@ const settings = {
     short: 'VitePress Best Press.',
     long: 'VitePress Best Press.',
   },
+  image: '/images/logo/logo.png',
+  color: '#0064FC',
 }
 
 // https://vitepress.dev/reference/site-config
@@ -39,7 +41,7 @@ export default defineConfig({
   description: settings.description.short,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' }],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/logo.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: settings.image }],
 
     ['meta', { name: 'darkreader-lock' }],
 
@@ -50,14 +52,14 @@ export default defineConfig({
     ['meta', { property: 'og:site_name', content: settings.name }],
     ['meta', { property: 'og:title', content: settings.title }],
     ['meta', { property: 'og:description', content: settings.description.short }],
-    ['meta', { property: 'og:image', content: '/images/logo.png' }],
+    ['meta', { property: 'og:image', content: settings.image }],
     ['meta', { property: 'og:image:alt', content: settings.title }],
 
     ['meta', { property: 'twitter:card', content: 'summary' }],
     ['meta', { property: 'twitter:site', content: settings.name }],
     ['meta', { property: 'twitter:title', content: settings.title }],
     ['meta', { property: 'twitter:description', content: settings.description.short }],
-    ['meta', { property: 'twitter:image', content: '/images/logo.png' }],
+    ['meta', { property: 'twitter:image', content: settings.image }],
     ['meta', { property: 'twitter:image:alt', content: settings.title }],
   ],
 
