@@ -29,7 +29,7 @@ table th {
 
 /* NOTE: This is a "fix" for the search modal content shift */
 @supports (scrollbar-gutter: stable) {
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
         html {
             scrollbar-gutter: stable;
         }
