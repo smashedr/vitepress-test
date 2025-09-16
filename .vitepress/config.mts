@@ -42,7 +42,10 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', type: 'image/x-icon', href: `${settings.base}/favicon.ico` }],
     // ['link', { rel: 'icon', type: 'image/svg', sizes: 'any', href: '/images/logo.svg' }],
-    ['link', { rel: 'apple-touch-icon', type: 'image/png', sizes: '180x180', href: settings.image }],
+    [
+      'link',
+      { rel: 'apple-touch-icon', type: 'image/png', sizes: '180x180', href: settings.base + settings.image },
+    ],
     ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${settings.base}/images/logo32.png` }],
     // ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/images/logo16.png' }],
 
@@ -109,6 +112,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
+      { icon: 'vitepress', link: 'https://github.com/smashedr/vitepress-test' },
       { icon: 'github', link: 'https://github.com/cssnr' },
       { icon: 'discord', link: 'https://discord.gg/wXy6m2X8wY' },
       { icon: 'kofi', link: 'https://ko-fi.com/cssnr' },
