@@ -9,7 +9,7 @@ const settings = {
     short: 'VitePress Best Press.',
     long: 'VitePress Best Press.',
   },
-  image: '/images/logo/logo.png',
+  image: '/images/logo.png',
   color: '#0064FC',
 }
 
@@ -40,8 +40,11 @@ export default defineConfig({
   title: settings.title,
   description: settings.description.short,
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' }],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: settings.image }],
+    ['link', { rel: 'icon', type: 'image/x-icon', href: `${settings.base}/favicon.ico` }],
+    // ['link', { rel: 'icon', type: 'image/svg', sizes: 'any', href: '/images/logo.svg' }],
+    ['link', { rel: 'apple-touch-icon', type: 'image/png', sizes: '180x180', href: settings.image }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${settings.base}/images/logo32.png` }],
+    // ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/images/logo16.png' }],
 
     ['meta', { name: 'darkreader-lock' }],
 
@@ -67,7 +70,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     siteTitle: settings.title,
-    logo: '/images/logo-sm.png',
+    logo: '/images/logo32.png',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Alpha', link: '/alpha' },
