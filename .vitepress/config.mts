@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 
 const settings = {
   base: '/vitepress-test', // no trailing slash
@@ -19,6 +20,19 @@ export default defineConfig({
     server: {
       allowedHosts: true,
     },
+    plugins: [
+      groupIconVitePlugin({
+        customIcon: {
+          git: 'vscode-icons:file-type-git',
+        },
+      }),
+    ],
+  },
+  markdown: {
+    config(md) {
+      md.use(groupIconMdPlugin)
+    },
+    toc: { level: [2] },
   },
 
   title: settings.title,
@@ -54,16 +68,26 @@ export default defineConfig({
     logo: '/images/logo-sm.png',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Test', link: '/test' },
-      { text: 'Examples', link: '/examples' },
+      { text: 'Alpha', link: '/alpha' },
+      { text: 'Bravo', link: '/bravo' },
+      // { text: 'Charlie', link: '/charlie' },
+      {
+        text: 'Old',
+        items: [
+          { text: 'Contributors', link: 'old/contributors' },
+          { text: 'Swiper', link: 'old/swiper' },
+          { text: 'VP Card', link: 'old/vpcard' },
+        ],
+      },
       {
         text: 'Links',
         items: [
-          { text: 'Zipline Android GitHub', link: 'https://github.com/cssnr/zipline-android' },
-          { text: 'Documentation GitHub', link: 'https://github.com/cssnr/zipline-android-docs' },
-          { text: 'Diced Zipline Server', link: 'https://github.com/diced/zipline' },
-          { text: 'Developer Site', link: 'https://cssnr.github.io/' },
-          { text: 'Contribute', link: 'https://ko-fi.com/cssnr' },
+          { text: 'Django Files', link: 'https://django-files.github.io/' },
+          { text: 'VitePress Swiper', link: 'https://vitepress-swiper.cssnr.com/' },
+          { text: 'Docker Deploy', link: 'https://docker-deploy.cssnr.com/' },
+          { text: 'Portainer Deploy', link: 'https://portainer-deploy.cssnr.com/' },
+          { text: 'Zipline Android', link: 'https://zipline-android.cssnr.com/' },
+          { text: 'Zipline Extension', link: 'https://zipline-extension.cssnr.com/' },
         ],
       },
     ],
@@ -72,10 +96,9 @@ export default defineConfig({
       {
         text: 'Examples',
         items: [
-          { text: 'Test', link: '/test' },
-          { text: 'Test 2', link: '/test2' },
-          { text: 'Markdown', link: '/markdown' },
-          { text: 'Examples', link: '/examples' },
+          { text: 'Alpha', link: '/alpha' },
+          { text: 'Bravo', link: '/bravo' },
+          { text: 'Charlie', link: '/charlie' },
         ],
       },
     ],
@@ -94,7 +117,7 @@ export default defineConfig({
 
     editLink: {
       pattern: 'https://github.com/smashedr/vitepress-test/blob/master/docs/:path',
-      text: 'View on GitHub',
+      text: 'View or Edit on GitHub',
     },
 
     lastUpdated: {
@@ -106,13 +129,13 @@ export default defineConfig({
     },
 
     search: {
-      // provider: 'local',
-      provider: 'algolia',
-      options: {
-        appId: 'CYR3HCDCK8',
-        apiKey: '2ebbec61f58bdaa0f89787848930815c',
-        indexName: 'smashedr_github_io_vitepress_test',
-      },
+      provider: 'local',
+      // provider: 'algolia',
+      // options: {
+      //   appId: 'CYR3HCDCK8',
+      //   apiKey: '2ebbec61f58bdaa0f89787848930815c',
+      //   indexName: 'smashedr_github_io_vitepress_test',
+      // },
     },
 
     // footer: {

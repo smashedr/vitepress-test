@@ -11,20 +11,23 @@ hero:
     alt: Zipline Android
   actions:
     - theme: brand
-      text: Test
-      link: /test
+      text: Alpha
+      link: /alpha
     - theme: alt
-      text: Examples
-      link: /examples
+      text: Bravo
+      link: /bravo
+    - theme: alt
+      text: Charlie
+      link: /charlie
 
 features:
-  - title: Test 1
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    link: /test
-  - title: Tes 2
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    link: /test2
-  - title: Examples
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    link: /examples
+  - title: Alpha
+    details: Lorem ipsum dolor sit amet.
+    link: /alpha
+  - title: Bravo
+    details: Lorem ipsum dolor sit amet.
+    link: /bravo
+  - title: Charlie
+    details: Lorem ipsum dolor sit amet.
+    link: /charlie
 ---

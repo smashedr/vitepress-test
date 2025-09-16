@@ -3,10 +3,13 @@
     "dev": "vitepress dev .",
     "build": "vitepress build .",
     "preview": "vitepress preview .",
-    "prettier": "npx prettier --check ."
+    "prettier": "npx prettier --check .",
+    "get-contributors": "npx get-contributors cssnr/stack-deploy-action"
   },
   "dependencies": {
-    "vitepress": "^1.6.4"
+    "@cssnr/vitepress-plugin-contributors": "file:../vitepress-contributors",
+    "vitepress": "^2.0.0-alpha.12",
+    "vitepress-plugin-group-icons": "^1.6.3"
   },
   "devDependencies": {
     "prettier": "^3.6.2"
