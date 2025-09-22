@@ -77,8 +77,15 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Alpha', link: '/alpha' },
-      { text: 'Bravo', link: '/bravo' },
-      // { text: 'Charlie', link: '/charlie' },
+      // { text: 'Bravo', link: '/bravo' },
+      {
+        text: 'Plugins',
+        items: [
+          { text: 'Swiper', link: '/plugins/swiper' },
+          { text: 'Contributors', link: '/plugins/contributors' },
+          { text: 'CopyButton', link: '/plugins/copybutton' },
+        ],
+      },
       {
         text: 'Old',
         items: [
@@ -92,6 +99,8 @@ export default defineConfig({
         items: [
           { text: 'Django Files', link: 'https://django-files.github.io/' },
           { text: 'VitePress Swiper', link: 'https://vitepress-swiper.cssnr.com/' },
+          { text: 'VitePress Contributors', link: 'https://vitepress-contributors.cssnr.com/' },
+          { text: 'VitePress CopyButton', link: 'https://vitepress-copybutton.cssnr.com/' },
           { text: 'Docker Deploy', link: 'https://docker-deploy.cssnr.com/' },
           { text: 'Portainer Deploy', link: 'https://portainer-deploy.cssnr.com/' },
           { text: 'Zipline Android', link: 'https://zipline-android.cssnr.com/' },
@@ -102,11 +111,18 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Pages',
         items: [
           { text: 'Alpha', link: '/alpha' },
           { text: 'Bravo', link: '/bravo' },
-          { text: 'Charlie', link: '/charlie' },
+        ],
+      },
+      {
+        text: 'Plugins',
+        items: [
+          { text: 'Swiper', link: '/plugins/swiper' },
+          { text: 'Contributors', link: '/plugins/contributors' },
+          { text: 'CopyButton', link: '/plugins/copybutton' },
         ],
       },
     ],

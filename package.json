@@ -1,13 +1,18 @@
 {
   "scripts": {
-    "dev": "vitepress dev .",
     "build": "vitepress build .",
-    "preview": "vitepress preview .",
-    "prettier": "npx prettier --check .",
-    "get-contributors": "npx get-contributors vuejs/vitepress -m 98"
+    "dev": "vitepress dev .",
+    "docs": "npm run dev",
+    "get-contributors": "npx get-contributors vuejs/vitepress -m 98",
+    "postinstall": "npm run get-contributors",
+    "prettier:check": "npx prettier --check .",
+    "prettier:write": "npx prettier --write .",
+    "preview": "vitepress preview ."
   },
   "dependencies": {
-    "@cssnr/vitepress-plugin-contributors": "file:../vitepress-contributors",
+    "@cssnr/vitepress-plugin-contributors": "^0.0.3",
+    "@cssnr/vitepress-plugin-copybutton": "^0.0.2",
+    "@cssnr/vitepress-swiper": "^0.2.0",
     "vitepress": "^2.0.0-alpha.12",
     "vitepress-plugin-group-icons": "^1.6.3"
   },

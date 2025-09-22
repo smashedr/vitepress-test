@@ -29,6 +29,7 @@ table th {
 
 /* NOTE: This is a "fix" for the search modal content shift */
 @supports (scrollbar-gutter: stable) {
+    /* NOTE: This is 769px in VitePress 1.x */
     @media (min-width: 768px) {
         html {
             scrollbar-gutter: stable;

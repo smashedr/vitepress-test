@@ -5,17 +5,19 @@ import 'virtual:group-icons.css'
 import TextBlock from './components/TextBlock.vue'
 import VPCard from './components/VPCard.vue'
 
-// import CopyButton from '@cssnr/vitepress-plugin-copybutton'
-// import '@cssnr/vitepress-plugin-copybutton/style.css'
+import CopyButton from '@cssnr/vitepress-plugin-copybutton'
+import '@cssnr/vitepress-plugin-copybutton/style.css'
 
-// import Contributors from '@cssnr/vitepress-plugin-contributors'
-// import '@cssnr/vitepress-plugin-contributors/style.css'
-// import contributors from '../contributors.json'
+import Contributors from '@cssnr/vitepress-plugin-contributors'
+import '@cssnr/vitepress-plugin-contributors/style.css'
+import contributors from '../contributors.json'
 
-// import VPSwiper from '@cssnr/vitepress-swiper'
-// import '@cssnr/vitepress-swiper/style.css'
+import VPSwiper from '@cssnr/vitepress-swiper'
+import '@cssnr/vitepress-swiper/style.css'
 
+// https://vitepress.dev/guide/extending-default-theme
 // noinspection JSUnusedGlobalSymbols
+/** @type {import('vitepress').Theme} */
 export default {
     ...DefaultTheme,
 
@@ -25,11 +27,11 @@ export default {
         app.component('TextBlock', TextBlock)
         app.component('VPCard', VPCard)
 
-        // app.component('CB', CopyButton)
+        app.component('CB', CopyButton)
 
-        // app.component('Contributors', Contributors)
-        // app.config.globalProperties.$contributors = contributors
+        app.component('Contributors', Contributors)
+        app.config.globalProperties.$contributors = contributors
 
-        // app.component('VPSwiper', VPSwiper)
+        app.component('VPSwiper', VPSwiper)
     },
 }

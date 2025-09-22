@@ -17,8 +17,8 @@ hero:
       text: Bravo
       link: /bravo
     - theme: alt
-      text: Charlie
-      link: /charlie
+      text: Plugins
+      link: /plugins/swiper
 
 features:
   - title: Alpha
@@ -27,7 +27,7 @@ features:
   - title: Bravo
     details: Lorem ipsum dolor sit amet.
     link: /bravo
-  - title: Charlie
+  - title: Plugins
     details: Lorem ipsum dolor sit amet.
-    link: /charlie
+    link: /plugins/swiper
 ---
