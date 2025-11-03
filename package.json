@@ -10,7 +10,7 @@
     "preview": "vitepress preview ."
   },
   "dependencies": {
-    "@cssnr/vitepress-plugin-contributors": "^0.0.3",
+    "@cssnr/vitepress-plugin-contributors": "^0.0.5",
     "@cssnr/vitepress-plugin-copybutton": "^0.0.2",
     "@cssnr/vitepress-swiper": "^0.2.0",
     "vitepress": "^2.0.0-alpha.12",
