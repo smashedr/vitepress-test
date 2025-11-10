@@ -89,7 +89,7 @@ jobs:
     steps:
       - name: "Algolia Crawler"
         if: ${{ env.CRAWLER_ID != '' }}
-        uses: cssnr/algolia-crawler-action@v1
+        uses: cssnr/algolia-crawler-action@v2
         with:
           crawler_id: ${{ env.CRAWLER_ID }}
           crawler_user_id: ${{ secrets.CRAWLER_USER_ID }}
